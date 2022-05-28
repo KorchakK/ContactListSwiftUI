@@ -22,7 +22,6 @@ struct ContactInformation: View {
                     Spacer()
                 }
                 .padding()
-
             case 1:
                 HStack{
                     Image(systemName: "phone")
