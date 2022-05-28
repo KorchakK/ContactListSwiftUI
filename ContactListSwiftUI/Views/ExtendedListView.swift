@@ -14,21 +14,8 @@ struct ExtendedListView: View {
         NavigationView {
             List(persons) { person in
                 Section(person.fullName) {
-                    ForEach(0..<2) { i in
-                        if i == 0 {
-                            HStack {
-                                Image(systemName: "phone")
-                                    .foregroundColor(.blue)
-                                Text(person.phoneNumber)
-                            }
-                        } else {
-                            HStack {
-                                Image(systemName: "tray")
-                                    .foregroundColor(.blue)
-                                Text(person.email)
-                            }
-                        }
-                    }
+                    Label(person.phoneNumber, systemImage: "phone")
+                    Label(person.email, systemImage: "tray")
                 }
                 .navigationTitle("Contact List")
             }
